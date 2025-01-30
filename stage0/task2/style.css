@@ -6,7 +6,6 @@
 
 html {
   font-size: 14px;
-
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 400;
@@ -19,6 +18,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100vw;
   border: solid 3px green;
   padding: 2rem;
 }
