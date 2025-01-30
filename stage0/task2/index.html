@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="profile-card">
+      <div class="profile-picture">
+        <!-- <picture class="profile-image">
+          <source
+            media="(min-width: 271px )"
+            srcset="./asssets/profile-218.png"
+          />
+          <source
+            media="(min-width: 290px )"
+            srcset="./asssets/profile-218.png"
+          />
+          <source
+            media="(min-width: 356px )"
+            srcset="./asssets/profile-248.png"
+          />
+          <source
+            media="(min-width: 430px )"
+            srcset="./asssets/profile-311.png"
+          />
+          <source
+            media="(min-width: 470px )"
+            srcset="./asssets/profile-334.png"
+          />
+          <img src="./asssets/profile-390.png" alt="profile-picture" />
+        </picture> -->
+        <img
+          src="./asssets/profile.png"
+          alt="profile-picture"
+          class="profile-image"
+        />
+      </div>
+      <div class="profile-description">
+        <h2 data-testid="fullName">Joshua Nwankwoala</h2>
+
+        <p class="job-title" data-testid="jobTitle">
+          Frontend Developer and Mobile Application Developer
+        </p>
+      </div>
+      <div class="spacer"></div>
+      <div class="profile-contents">
+        <p class="bio" data-testid="shortBio">
+          Passionate about creating interactive and accessible user experiences.
+          Skilled in React, TypeScript, and modern UI frameworks.
+        </p>
+        <div class="profile-contact">
+          <p class="location" data-testid="currentLocation">
+            <span class="contact">
+              <img
+                src="./asssets/location.png"
+                alt="my location"
+                style="width: 15px; height: 15px"
+              />
+            </span>
+            <span> Abuja, Nigeria </span>
+          </p>
+          <span>|</span>
+          <p class="email" data-testid="emailAddress">
+            <span class="contact">
+              <img
+                src="./asssets/gmail.png"
+                alt="gmail"
+                style="width: 15px; height: 15px"
+              />
+            </span>
+            <span> j9.tops@gmail.com </span>
+          </p>
+        </div>
+      </div>
+
+      <div class="social-links" data-testid="socialLinks">
+        <a
+          href="www.linkedin.com/in/joshua-n-985588268"
+          target="_blank"
+          rel="noopener"
+        >
+          <img alt="linkedin" src="./asssets/linkedin-plain.svg" class="link" />
+        </a>
+        <a href="https://github.com/J9-tops" target="_blank" rel="noopener">
+          <img alt="github" src="./asssets/github-original.svg" class="link" />
+        </a>
+        <a
+          href="https://x.com/jimmysmartcn"
+          target="_blank"
+          rel="noopener
+        "
+        >
+          <img alt="github" src="./asssets/twitter-original.svg" class="link" />
+        </a>
+      </div>
+      <p class="utc-time" data-testid="currentTimeUTC"></p>
+    </div>
+  </body>
+</html>
