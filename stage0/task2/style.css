@@ -1,3 +1,7 @@
+:root {
+  --background-color: #54afee;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +23,6 @@ body {
   align-items: center;
   height: 100vh;
   width: 100vw;
-  border: solid 3px green;
   padding: 2rem;
 }
 
@@ -27,17 +30,17 @@ body {
   width: clamp(16rem, 29rem, 40rem);
   /* height: 31rem; */
   border-radius: 12px;
-  border: solid 1px red;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  padding: 0 0 10px 0;
+  padding: 0 0 20px 0;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .profile-picture {
   width: 100%;
-  background: #54afee;
+  background: var(--background-color);
   height: 200px;
   border-radius: 12px 12px 30px 30px;
 }
@@ -88,6 +91,28 @@ h2 {
   column-gap: 1rem;
 }
 
+.profile-contact p {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* .profile-contact p:last-child p:hover {
+  padding: 5px;
+  transform: translateY(-3px) scale(1.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+} */
+
+.profile-contact a {
+  text-decoration: none;
+  color: inherit; /* Keeps the normal text color */
+  transition: color 0.3s ease-in-out;
+}
+
+/* .profile-contact :last-child p:active {
+  transform: scale(0.95);
+} */
+
 .location,
 .email {
   display: flex;
@@ -115,10 +140,35 @@ h2 {
 .social-links img {
   width: 20px;
   height: 20px;
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
 }
 
-.link:hover {
-  color: rgba(0, 0, 255, 0.3);
+.social-links a {
+  background: var(--background-color);
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.social-links a {
+  background: var(--background-color);
+  padding: 5px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    background 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+  transform: rotate(360deg) scale(1.2);
+  background: #3b82f6;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.social-links a:active {
+  transform: scale(0.95);
 }
 
 .utc-time {
