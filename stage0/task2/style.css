@@ -36,7 +36,6 @@ body {
   position: relative;
   padding: 0 0 20px 0;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-  transform: scale(0.8);
 }
 
 .profile-picture {
@@ -318,5 +317,11 @@ h2 {
 
   .spacer {
     height: 55px;
+  }
+}
+
+@media (min-width: 768px) {
+  .profile-card {
+    transform: scale(0.8);
   }
 }
