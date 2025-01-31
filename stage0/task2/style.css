@@ -320,6 +320,12 @@ h2 {
   }
 }
 
+@media (min-width: 1140px) {
+  .profile-card {
+    transform: scale(1.2);
+  }
+}
+
 @media (min-width: 1366px) {
   .profile-card {
     transform: scale(0.8);
