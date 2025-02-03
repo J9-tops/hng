@@ -83,7 +83,7 @@ h1 {
 }
 
 .color-option .button-text {
-  opacity: 0;
+  display: none;
   transition: opacity 1s;
   color: white;
 }
@@ -185,6 +185,6 @@ h1 {
   }
 
   .container {
-    height: 80%;
+    transform: scale(1.4);
   }
 }

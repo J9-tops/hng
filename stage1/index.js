@@ -7,17 +7,14 @@ const newGameButton = document.querySelector("#newGameButton");
 let score = 0;
 let targetColor = "";
 
-const predefinedColors = ["red", "blue", "green", "yellow", "purple", "orange"];
-
-function getContrastingColor(color) {
-  let rgb = color.match(/\d+/g);
-  if (!rgb) return "black";
-
-  let [r, g, b] = rgb.map(Number);
-  let brightness = (r * 299 + g * 587 + b * 114) / 1000;
-
-  return brightness > 125 ? "black" : "white";
-}
+const predefinedColors = [
+  "#BE3144",
+  "#3674B5",
+  "#5B913B",
+  "#FADA7A",
+  "#DD88CF",
+  "#FBA518",
+];
 
 function startGame() {
   let colors = [...predefinedColors].sort(() => Math.random() - 0.5);
@@ -28,10 +25,6 @@ function startGame() {
     btn.style.backgroundColor = colors[index];
     btn.onclick = () => checkGuess(colors[index]);
     btn.style.opacity = "1";
-
-    const bgColor = window.getComputedStyle(btn).backgroundColor;
-    const textColor = getContrastingColor(bgColor);
-    btn.querySelector(".button-text").style.color = textColor;
   });
 
   gameStatus.textContent = "";
@@ -76,7 +69,6 @@ function checkGuess(selectedColor) {
       colorOptions.forEach((btn) => {
         btn.style.transition = "opacity 0.5s ease-in-out";
         btn.style.opacity = "1";
-        btn.querySelector(".button-text").style.opacity = "0";
       });
     }, 2000);
   } else {
@@ -86,7 +78,6 @@ function checkGuess(selectedColor) {
     colorOptions.forEach((btn) => {
       btn.style.transition = "opacity 0.5s ease-in-out";
       btn.style.opacity = "0";
-      btn.querySelector(".button-text").style.opacity = "0";
     });
 
     setTimeout(() => {
