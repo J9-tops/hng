@@ -92,7 +92,8 @@ h1 {
   color: white;
 }
 
-.color-option:hover {
+.color-option:hover,
+.color-option:active {
   transform: scale(1.1);
   box-shadow: inset 0 -5px 8px rgba(0, 0, 0, 0.4);
 }
@@ -166,9 +167,9 @@ h1 {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 360px) and (max-width: 480px) {
   body {
-    /* padding: 10px 30px 109px 30px; */
+    padding: 10px 30px 50px 30px;
   }
 }
 
@@ -188,7 +189,13 @@ h1 {
     padding: 30px 0;
   }
 
-  .container {
-    /* transform: scale(1.28); */
+  .color-box {
+    width: 160px;
+    height: 160px;
+  }
+
+  .color-option {
+    width: 90px;
+    height: 90px;
   }
 }
