@@ -2,7 +2,7 @@ const colorBox = document.querySelector(".color-box");
 const colorOptions = document.querySelectorAll(".color-option");
 const gameStatus = document.querySelector("[data-testid='gameStatus']");
 const scoreDisplay = document.querySelector("[data-testid='score']");
-const newGameButton = document.getElementById("newGameButton");
+const newGameButton = document.querySelector("#newGameButton");
 
 let score = 0;
 let targetColor = "";
@@ -10,13 +10,13 @@ let targetColor = "";
 const predefinedColors = ["red", "blue", "green", "yellow", "purple", "orange"];
 
 function getContrastingColor(color) {
-  let rgb = color.match(/\d+/g); // Extract RGB values
-  if (!rgb) return "black"; // Default fallback
+  let rgb = color.match(/\d+/g);
+  if (!rgb) return "black";
 
   let [r, g, b] = rgb.map(Number);
-  let brightness = (r * 299 + g * 587 + b * 114) / 1000; // Luminance formula
+  let brightness = (r * 299 + g * 587 + b * 114) / 1000;
 
-  return brightness > 125 ? "black" : "white"; // Dark colors get white text, light colors get black text
+  return brightness > 125 ? "black" : "white";
 }
 
 function startGame() {
@@ -76,35 +76,35 @@ function checkGuess(selectedColor) {
       colorOptions.forEach((btn) => {
         btn.style.transition = "opacity 0.5s ease-in-out";
         btn.style.opacity = "1";
+        btn.querySelector(".button-text").style.opacity = "0";
       });
-    }, 1000);
+    }, 2000);
   } else {
     gameStatus.textContent = "❌ Wrong! Try again.";
     gameStatus.style.color = "#e74c3c";
 
-    // Fade out effect
     colorOptions.forEach((btn) => {
       btn.style.transition = "opacity 0.5s ease-in-out";
       btn.style.opacity = "0";
+      btn.querySelector(".button-text").style.opacity = "0";
     });
 
     setTimeout(() => {
       startGame();
 
-      // Fade back in effect
       setTimeout(() => {
         colorOptions.forEach((btn) => {
           btn.style.transition = "opacity 0.5s ease-in-out";
           btn.style.opacity = "1";
         });
-      }, 100);
-    }, 500);
+      }, 500);
+    }, 1000);
   }
   scoreDisplay.textContent = score;
 }
 
 newGameButton.onclick = () => {
-  score = 0; // Reset score
+  score = 0;
   scoreDisplay.textContent = score;
   gameStatus.textContent = "";
   startGame();

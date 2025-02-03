@@ -113,7 +113,6 @@ h1 {
   cursor: pointer;
   transition: background 0.3s;
   display: flex;
-  align-items: center;
   gap: 0.3rem;
 }
 
@@ -165,7 +164,7 @@ h1 {
 
 @media screen and (max-width: 480px) {
   body {
-    padding: 10px 30px 115px 30px;
+    padding: 10px 30px 109px 30px;
   }
 }
 
@@ -184,7 +183,8 @@ h1 {
   body {
     padding: 30px;
   }
+
   .container {
-    transform: scale(1.4);
+    height: 80%;
   }
 }
