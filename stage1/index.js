@@ -61,7 +61,7 @@ function checkGuess(selectedColor) {
   if (selectedColor === targetColor) {
     createConfetti();
     gameStatus.textContent = "🎉 Correct!";
-    gameStatus.style.color = "#27ae60";
+    gameStatus.style.color = "#5CB338";
     score++;
 
     setTimeout(() => {
