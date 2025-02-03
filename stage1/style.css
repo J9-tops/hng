@@ -10,7 +10,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: rgb(212, 212, 212);
+  background-color: rgb(221, 220, 220);
   width: 100vw;
   height: 100vh;
   padding: 0 30px;
@@ -59,7 +59,11 @@ body {
 
 h1 {
   font-size: 1.6rem;
-  margin-bottom: -8px;
+  margin-bottom: -6px;
+}
+
+.game-instructions {
+  font-size: 1.2rem;
 }
 
 .options {
@@ -72,8 +76,8 @@ h1 {
 }
 
 .color-option {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   border: none;
   cursor: pointer;
@@ -164,18 +168,18 @@ h1 {
 
 @media screen and (max-width: 480px) {
   body {
-    padding: 10px 30px 109px 30px;
+    /* padding: 10px 30px 109px 30px; */
   }
 }
 
-@media screen and (min-width: 330px) {
+@media screen and (min-width: 360px) {
   .options {
     grid-template-columns: repeat(3, 1fr);
   }
 
   .color-option {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
   }
 }
 
@@ -185,6 +189,6 @@ h1 {
   }
 
   .container {
-    transform: scale(1.28);
+    /* transform: scale(1.28); */
   }
 }
