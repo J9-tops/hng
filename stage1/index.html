@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Guessing Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="container-tablet">
+      <svg
+        fill="#000000"
+        version="1.1"
+        id="Capa_1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 297 297"
+        xml:space="preserve"
+      >
+        <g>
+          <path
+            d="M254.141,53.244C224.508,18.909,185.299,0,143.736,0c-35.062,0-68.197,13.458-93.302,37.9
+       C10.383,76.892-2.822,123.282,14.207,165.178c13.868,34.122,45.625,57.954,77.227,57.954c0.841,0,1.671-0.016,2.508-0.053
+       c4.705-0.194,9.249-0.586,13.646-0.966c5.309-0.462,10.325-0.895,14.77-0.895c10.54,0,19.645,0,19.645,26.846
+       c0,28.811,17.538,48.934,42.65,48.936c0.002,0,0.002,0,0.004,0c17.864,0,37.651-10.342,57.215-29.903
+       c25.882-25.88,43.099-62.198,47.234-99.64C293.762,125.326,281.343,84.763,254.141,53.244z M227.315,252.54
+       c-15.397,15.398-30.55,23.877-42.66,23.875c-16.288,0-22.064-15.274-22.064-28.352c0-32.357-12.786-47.43-40.232-47.43
+       c-5.333,0-10.778,0.472-16.545,0.969c-4.169,0.359-8.481,0.733-12.724,0.909c-0.553,0.024-1.102,0.034-1.655,0.034
+       c-23.07,0-47.529-18.975-58.156-45.118c-13.714-33.738-2.225-71.927,31.519-104.779c21.239-20.676,49.272-32.063,78.939-32.063
+       c35.485,0,69.159,16.373,94.82,46.107C289.187,125.359,272.6,207.256,227.315,252.54z"
+          />
+        </g>
+      </svg>
+    </div>
+    <div class="container-mobile">
+      <div class="confetti-container"></div>
+      <h1>🎨 Color Guessing Game</h1>
+      <p data-testid="gameInstructions" class="game-instructions">
+        Guess the correct color from the options below!
+      </p>
+      <div class="color-box" data-testid="colorBox"></div>
+      <div class="options">
+        <button class="color-option" data-testid="colorOption">
+          <span class="button-text">Pick Me</span>
+        </button>
+        <button class="color-option" data-testid="colorOption">
+          <span class="button-text">Pick Me</span>
+        </button>
+        <button class="color-option" data-testid="colorOption">
+          <span class="button-text">Pick Me</span>
+        </button>
+        <button class="color-option" data-testid="colorOption">
+          <span class="button-text">Pick Me</span>
+        </button>
+        <button class="color-option" data-testid="colorOption">
+          <span class="button-text">Pick Me</span>
+        </button>
+        <button class="color-option" data-testid="colorOption">
+          <span class="button-text">Pick Me</span>
+        </button>
+      </div>
+      <p class="status" data-testid="gameStatus"></p>
+      <p class="score">Score: <span data-testid="score">0</span></p>
+      <button id="newGameButton" data-testid="newGameButton">
+        <span class="newGameIcon"
+          ><img
+            src="./assets/autorenew.svg"
+            alt="new game"
+            width="20"
+            height="20"
+          />
+        </span>
+        <span> New Game </span>
+      </button>
+    </div>
+  </body>
+</html>

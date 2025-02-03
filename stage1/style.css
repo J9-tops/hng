@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(212, 212, 212);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 30px 30px;
+}
+
+.container-tablet {
+  display: none;
+}
+
+.container-mobile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 10px;
+  max-width: 600px;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  -moz-text-align-last: center;
+  text-align-last: center;
+}
+
+.container-mobile .color-box {
+  width: 130px;
+  height: 130px;
+  border: 5px solid black;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.container-mobile h1 {
+  font-size: 1.6rem;
+}
+
+.container-mobile .options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  justify-content: center;
+  padding: 10px;
+  padding-top: 30px;
+}
+
+.container-mobile .color-option {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  box-shadow: inset 0 -3px 5px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s, box-shadow 0.2s;
+  padding: 5px;
+}
+
+.container-mobile .color-option .button-text {
+  opacity: 0;
+  transition: opacity 1s;
+  color: white;
+}
+
+.container-mobile .color-option:hover {
+  transform: scale(1.1);
+  box-shadow: inset 0 -5px 8px rgba(0, 0, 0, 0.4);
+}
+
+.container-mobile .color-option:hover .button-text {
+  opacity: 1;
+}
+
+.container-mobile .status {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.container-mobile .score {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+.container-mobile #newGameButton {
+  background: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.container-mobile .newGameIcon {
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+}
+
+.container-mobile #newGameButton:hover {
+  background: #2980b9;
+}
+
+.confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  opacity: 0.7;
+  -webkit-animation: confetti-fall 2s linear infinite;
+  animation: confetti-fall 2s linear infinite;
+}
+
+@-webkit-keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 330px) {
+  .container-mobile .options {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .container-mobile .color-option {
+    width: 60px;
+    height: 60px;
+  }
+}
