@@ -10,32 +10,36 @@
   <body>
     <div class="container">
       <div class="confetti-container"></div>
+      <div class="status-container">
+        <p class="status" data-testid="gameStatus"></p>
+      </div>
+
       <h1>🎨 Color Guessing Game</h1>
       <p data-testid="gameInstructions" class="game-instructions">
         Guess the correct color from the options below!
       </p>
       <div class="color-box" data-testid="colorBox"></div>
       <div class="options">
-        <button class="color-option" data-testid="colorOption">
+        <button type="button" class="color-option" data-testid="colorOption">
           <span class="button-text">Pick Me</span>
         </button>
-        <button class="color-option" data-testid="colorOption">
+        <button type="button" class="color-option" data-testid="colorOption">
           <span class="button-text">Pick Me</span>
         </button>
-        <button class="color-option" data-testid="colorOption">
+        <button type="button" class="color-option" data-testid="colorOption">
           <span class="button-text">Pick Me</span>
         </button>
-        <button class="color-option" data-testid="colorOption">
+        <button type="button" class="color-option" data-testid="colorOption">
           <span class="button-text">Pick Me</span>
         </button>
-        <button class="color-option" data-testid="colorOption">
+        <button type="button" class="color-option" data-testid="colorOption">
           <span class="button-text">Pick Me</span>
         </button>
-        <button class="color-option" data-testid="colorOption">
+        <button type="button" class="color-option" data-testid="colorOption">
           <span class="button-text">Pick Me</span>
         </button>
       </div>
-      <p class="status" data-testid="gameStatus"></p>
+
       <p class="score">Score: <span data-testid="score">0</span></p>
       <button id="newGameButton" data-testid="newGameButton">
         <span class="newGameIcon"
