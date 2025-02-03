@@ -32,7 +32,6 @@ function startGame() {
     const bgColor = window.getComputedStyle(btn).backgroundColor;
     const textColor = getContrastingColor(bgColor);
     btn.querySelector(".button-text").style.color = textColor;
-    console.log(btn.querySelector(".button-text").style.color);
   });
 
   gameStatus.textContent = "";
