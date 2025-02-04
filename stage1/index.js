@@ -16,35 +16,17 @@ const predefinedColors = [
   "#FBA518",
 ];
 
-function startGame() {
-  let colors = [...predefinedColors].sort(() => Math.random() - 0.5);
-  targetColor = colors[Math.floor(Math.random() * colors.length)];
-  colorBox.style.backgroundColor = targetColor;
-
-  colorOptions.forEach((btn, index) => {
-    btn.style.backgroundColor = colors[index];
-    btn.onclick = () => checkGuess(colors[index]);
-    btn.style.opacity = "1";
-  });
-
-  gameStatus.textContent = "";
-}
+const confettiColors = ["#ff0", "#f00", "#0f0", "#00f", "#f0f", "#0ff"];
 
 function createConfetti() {
   const container = document.querySelector(".confetti-container");
 
-  for (let i = 0; i < 50; i++) {
+  for (let i = 0; i < 120; i++) {
     const confetti = document.createElement("div");
     confetti.classList.add("confetti");
 
-    confetti.style.backgroundColor = [
-      "#ff0",
-      "#f00",
-      "#0f0",
-      "#00f",
-      "#f0f",
-      "#0ff",
-    ][Math.floor(Math.random() * 6)];
+    confetti.style.backgroundColor =
+      confettiColors[Math.floor(Math.random() * 6)];
 
     confetti.style.left = Math.random() * 100 + "vw";
     confetti.style.animationDuration = Math.random() * 2 + 1 + "s";
@@ -92,6 +74,20 @@ function checkGuess(selectedColor) {
     }, 1000);
   }
   scoreDisplay.textContent = score;
+}
+
+function startGame() {
+  let colors = [...predefinedColors].sort(() => Math.random() - 0.5);
+  targetColor = colors[Math.floor(Math.random() * colors.length)];
+  colorBox.style.backgroundColor = targetColor;
+
+  colorOptions.forEach((btn, index) => {
+    btn.style.backgroundColor = colors[index];
+    btn.onclick = () => checkGuess(colors[index]);
+    btn.style.opacity = "1";
+  });
+
+  gameStatus.textContent = "";
 }
 
 newGameButton.onclick = () => {
