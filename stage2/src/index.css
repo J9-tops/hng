@@ -1,1 +1,61 @@
 @import "tailwindcss";
+@font-face {
+  font-family: "Road Rage";
+  src:
+    url("/fonts/RoadRage-Regular.woff2") format("woff2"),
+    url("/fonts/RoadRage-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src:
+    url("/fonts/Roboto-Regular.woff2") format("woff2"),
+    url("/fonts/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Jeju";
+  src:
+    url("/fonts/JejuMyeongjo-Regular.woff2") format("woff2"),
+    url("/fonts/JejuMyeongjo-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --font-rage: "Road Rage", serif;
+  --font-roboto: "Roboto", serif;
+  --font-jeju: "Jeju", serif;
+  --breakpoint-xs: 300px;
+  --color-whitish: #fafafa;
+  --color-blackish: #0a0c11;
+  --color-greenish: #197686;
+  --color-greyish: #b3b3b3;
+}
+
+body {
+  background-color: #02191d;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.glow {
+  position: absolute;
+  bottom: -37vw;
+  width: 110vw;
+  height: 100vh;
+  border-radius: 50%;
+  transform: translateX(-5%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.5) 10%,
+    transparent 100%
+  );
+  -webkit-filter: blur(50px);
+  filter: blur(50px);
+}
